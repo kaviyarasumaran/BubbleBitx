@@ -1,5 +1,4 @@
-
-import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react';
+import { Box, Heading, Text, VStack } from '@chakra-ui/react';
 import images from '../../../assets/images/images';
 
 const Hero = () => {
@@ -16,16 +15,29 @@ const Hero = () => {
             alignItems="center"
         >
             <VStack spacing={4} textAlign="center" color="white" maxW="2000px">
-                <Box >
-                    <Heading fontSize="4xl">
-                        Our company is always committed to making your experiences better and building services that always work towards your goal
+                <Box>
+                    <Heading fontSize="lg" fontFamily="formCompTexts">
+                        Our company is always committed to making your experiences better
                     </Heading>
-                    <Text fontSize="xl">
-                        Trust | Achieve | Lead
-                    </Text>
-                    <Button size="lg" colorScheme="teal">
-                        Be Productive
-                    </Button>
+                    <Heading fontSize="lg" fontFamily="formCompTexts">
+                        and building services that always work towards your goal
+                    </Heading>
+
+                    <Box
+                        size="lg"
+                        bg="linear-gradient(63deg, rgba(114,237,242,1) 0%, rgba(81,81,229,1) 35%);"
+                        mt={10}
+                        w={300}
+                        p={2}
+                        mx="auto"
+                    >
+                        <Text fontSize="2xl" fontWeight="medium">
+                            Trust | Achieve | Lead
+                        </Text>
+                        <Text fontSize="xl" letterSpacing={4}>
+                            Be Productive
+                        </Text>
+                    </Box>
                 </Box>
             </VStack>
         </Box>

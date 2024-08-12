@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Box, Heading, Flex, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, Button, Image, Link } from "@chakra-ui/react";
 import images from "../../assets/images/images";
+import { Icon, info, search } from "../../assets/icons/icons";
 
 const MenuItems = ({ children }) => (
     <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -66,17 +67,21 @@ const Header = (props) => {
                 alignItems="center"
                 justify={{ base: "center", md: "center" }}
                 flexDirection={{ base: "column", md: "row" }}
-                flexGrow={1}
+                gap={7}
+
             >
-                <MenuItems>Docs</MenuItems>
-                <MenuItems>Examples</MenuItems>
-                <MenuItems>Blog</MenuItems>
+                <Box><Link fontFamily="formCompTexts" fontSize="xs">Home</Link></Box>
+                <Box><Link fontFamily="formCompTexts" fontSize="xs">About us </Link></Box>
+                <Box><Link fontFamily="formCompTexts" fontSize="xs">Services </Link></Box>
+                <Box><Link fontFamily="formCompTexts" fontSize="xs">Contact us</Link></Box>
+                <Box><Link fontFamily="formCompTexts" fontSize="xs">Our partners</Link></Box>
             </Box>
 
-            <Box display={{ base: show ? "block" : "none", md: "block" }} mt={{ base: 4, md: 0 }}>
-                <Button bg="transparent" border="1px" color={scrollNav ? "black" : "white"} borderColor={scrollNav ? "black" : "white"}>
-                    Create account
-                </Button>
+            <Box display={{ base: show ? "block" : "none", md: "block" }} mt={{ base: 4, md: 0 }} >
+                <Box display="flex" flexDir="row" gap={10}>
+                    <Icon icon={search} style={{ height: 24, width: 24 }} />
+                    <Icon icon={info} style={{ height: 24, width: 24 }} />
+                </Box>
             </Box>
         </Flex>
     );

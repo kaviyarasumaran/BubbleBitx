@@ -31,12 +31,12 @@ const theme = extendTheme({
         },
     },
     fontSizes: {
-        lg: "20px",
-        xl: "30px",
+        lg: "25px",
+        xl: "35px",
         xs: "14px",
-        sm: "16px",
+        sm: "15px",
         base: "14px",
-        "2xl": "24px",
+        "2xl": "20px",
         "4xl": "10px"
     },
     fontWeights: {
